@@ -1,0 +1,25 @@
+using System;
+
+namespace P_3
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int K = 0;
+            int[] M; 
+
+            M = Array.ConvertAll(Console.ReadLine().Split(), i => int.Parse(i));
+
+            for (int i = 0; i<M.Length; i++)
+            {
+                if(M[i] % 2 == 0)
+                {
+                    K += 1;
+                }
+            }
+            Console.WriteLine("____________________");
+            Console.WriteLine("Количество четных чисел в массиве: "+K);
+        }
+    }
+}
